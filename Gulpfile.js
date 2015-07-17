@@ -9,7 +9,7 @@ map of paths for using with the tasks below
  */
 var paths = {
   entry: 'client/app/app.js',
-  app: ['client/app/**/*.{js,styl,html}', 'client/index.html'],
+  app: ['client/app/**/*.{js,styl,html}'],
   js: 'client/app/**/*!(.spec.js).js',
   styl: 'client/app/**/*.styl',
   toCopy: ['client/index.html'],
@@ -47,7 +47,7 @@ gulp.task('serve', function() {
 simple task to copy over needed files to dist
  */
 gulp.task('copy', function() {
-  return gulp.src(paths.toCopy, { base: '.' })
+  return gulp.src(paths.toCopy, { base: 'client' })
     .pipe(gulp.dest(paths.dest));
 });
 
