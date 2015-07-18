@@ -1,2 +1,14 @@
-// TODO: create the directive for the blog component
-// don't forget to include the template and styles and controller
+import './blog.styl';
+import template from './blog.html';
+import {BlogController as controller} from './blog.controller';
+
+export const blogDirective = () => {
+  return {
+    template,
+    controller,
+    controllerAs: 'vm',
+    scope: {},
+    restrict: 'E',
+    replace: true
+  };
+};

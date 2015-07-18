@@ -1,7 +1,7 @@
 @import '../../../styles'
 
 .blog
-  center(800px)
+  center(960px)
   .header
     *
       text-align center
@@ -12,11 +12,12 @@
     .post
       background-color white
       margin-bottom tb-margin
+      position relative
       makeShadow(1)
       col(1/3, 0, 3)
       .post-img
         overflow hidden
-        height 400px
+        height 200px
         img
           width 100%
           transition transform .5s ease-in-out
@@ -27,5 +28,11 @@
         background-color bg-color
       .post-author
         padding tb-padding lr-padding
+        *
+          font-weight 200
+      .action
+        position absolute
+        right 10px
+        bottom 14px
 
 

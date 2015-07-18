@@ -24,6 +24,7 @@ a
     height navbar-height
     background-color primary-color
     makeShadow(2)
+    z-index max-z
     position fixed
     min-width 100%
     padding 15px
@@ -39,3 +40,47 @@ a
   main
     padding-top navbar-height
 
+.button
+  outline none
+  border none
+  border-radius 2px
+  background-color primary-color
+  color white
+  text-transform uppercase
+  text-align center
+  min-width 88px
+  min-height 36px
+  overflow hidden
+  user-select none
+  vertical-align middle
+  position relative
+  padding 0px 6px
+  white-space nowrap
+  cursor pointer
+  font-weight 500
+  user-select none
+  font-size 14px
+  line-height 30px
+  &.accent
+    background-color accent-color
+  &.fab
+    width 56px
+    min-width 0px
+    background-clip padding-box
+    height 56px
+    line-height 56px
+    z-index 20
+    border-radius 50%
+
+  &:active
+  &:focus
+    border none
+    outline none
+
+  &.raised
+  &.fab
+    makeShadow(1)
+    transition all .3s ease
+
+    &:active
+      makeShadow(3)

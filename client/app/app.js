@@ -19,6 +19,7 @@ import ngAnimate from 'angular-animate';
 // without using default keyword
 // we must import it with the brackets
 import {home} from './components/home/home';
+import {blog} from './components/blog/blog';
 
 angular.module('app', [
   uiRouter,
@@ -28,6 +29,7 @@ angular.module('app', [
   // all angular modules have a name
   // property who's value is the name you set the
   // module to be
-  home.name
+  home.name,
+  blog.name
 ])
 .directive('app', appDirective);
