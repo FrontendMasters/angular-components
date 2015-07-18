@@ -10,3 +10,32 @@ body
   background-color bg-color
   *
     box-sizing border-box
+a
+  color white
+  text-decoration none
+  &:visited
+    color white
+  &:hover
+  &:active
+    text-decoration none
+
+#app
+  header nav
+    height navbar-height
+    background-color primary-color
+    makeShadow(2)
+    position fixed
+    min-width 100%
+    padding 15px
+    .logo
+      span(1/6)
+      color white
+      font-size 1.8rem
+      cursor pointer
+    .links
+      span(2/6, 3/6, 2)
+      *
+        font-size 1.3rem
+  main
+    padding-top navbar-height
+

@@ -3,7 +3,7 @@
 // thanks the the styles loader it gets added as a
 // <style> tag in the head by default but can be changed
 import 'normalize.css';
-import './app.styl';
+import {appDirective} from './app.directive';
 // the angular libs are just common js
 // and therefore we can assume they were
 // exported using the default keyword in ES2015
@@ -29,4 +29,5 @@ angular.module('app', [
   // property who's value is the name you set the
   // module to be
   home.name
-]);
+])
+.directive('app', appDirective);
