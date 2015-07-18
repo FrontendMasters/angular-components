@@ -2,7 +2,7 @@
 import './textbox.styl';
 import template from './textbox.html';
 
-const textboxDirective = () => {
+export const textboxDirective = () => {
   return {
     template,
     restrict: 'E',
