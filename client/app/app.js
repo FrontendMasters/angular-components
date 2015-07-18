@@ -21,6 +21,7 @@ import ngAnimate from 'angular-animate';
 import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
 
+
 angular.module('app', [
   uiRouter,
   ngAnimate,

@@ -1,0 +1,77 @@
+@import '../../../../styles'
+.textbox
+  position relative
+  margin-bottom 45px
+  width 100%
+
+  input
+    font-size 18px
+    padding 10px 10px 10px 5px
+    display block
+    color text-color
+    width 100%
+    background transparent
+    border none
+    border-bottom 1px solid darken(accent-color, 25%)
+    &:focus
+      outline none
+      & ~ .highlight
+        animation inputHighlight .3s ease
+      & ~ .bar:before
+      & ~ .bar:after
+        width 50%
+
+    &:focus ~ label
+    &:valid ~ label
+      top -20px
+      font-size 14px
+      color lighten(accent-color, 25%)
+
+  label
+    color darken(accent-color, 70%)
+    font-size 18px
+    font-weight normal
+    position absolute
+    pointer-events none
+    left 5px
+    top 10px
+    transition all 0.2s ease
+
+  .bar
+    position relative
+    display block
+    // width 120px
+    &:before
+    &:after
+      content ''
+      height 2px
+      width 0
+      bottom 1px
+      position absolute
+      background accent-color
+      transition ease all .2s
+    &:before
+      left: 50%
+    &:after
+      right 50%
+
+  .highlight
+    position absolute
+    height 60%
+    width 100px
+    top 25%
+    left 0
+    pointer-events none
+    opacity 0.5
+
+
+@keyframes inputHighlight {
+  from {
+    background accent-color
+  }
+
+  to {
+    background transparent
+    width 0
+  }
+}
