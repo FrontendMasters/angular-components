@@ -2,7 +2,7 @@ import './blogPost.styl';
 import template from './blogPost.html';
 import {BlogPostController as controller} from './blogPost.controller';
 
-export const blogPostDirective = () => {
+const blogPostDirective = () => {
   return {
     template,
     controller,
@@ -11,7 +11,6 @@ export const blogPostDirective = () => {
     scope: {
       post: '='
     },
-    bindToController: true,
     restrict: 'E',
     replace: true
   };
