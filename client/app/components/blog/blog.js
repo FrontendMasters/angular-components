@@ -11,10 +11,17 @@ export const blog = angular.module('blog', [uiRouter, ngAnimate])
     });
   })
   .directive('blog', blogDirective)
+  /*
+   * uses ngAnimate and the js animation api
+   * along with the new $animateCss
+   * to define a google now inspired card
+   * animation that will be applied on page load
+   * and filtering
+   */
   .animation('.slide', ($animateCss)=> {
     return {
-      enter(element, done) {
-        $animateCss(element, {
+      enter(element) {
+        return $animateCss(element, {
           addClass: '',
           duration: .6,
           easing: 'cubic-bezier(0.755, 0.05, 0.855, 0.06)',
@@ -30,11 +37,11 @@ export const blog = angular.module('blog', [uiRouter, ngAnimate])
             opacity: 1,
             transform: 'translateY(0) translateX(0)' //'translate3d(0, 0, 0)'
           }
-        }).start().then(done);
+        });
       },
 
-      leave(element, done) {
-        $animateCss(element, {
+      leave(element) {
+        return $animateCss(element, {
           addClass: '',
           duration: .6,
           easing: 'cubic-bezier(0.23, 1, 0.32, 1)',
@@ -48,7 +55,7 @@ export const blog = angular.module('blog', [uiRouter, ngAnimate])
             visibilty: 'hidden',
             transform: 'translate3d(0, -100%, 0)'
           }
-        }).start().then(done);
+        });
       }
     }
   });
