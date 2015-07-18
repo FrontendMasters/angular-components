@@ -16,6 +16,14 @@ export const home = angular.module('home', [])
         <div class="title">
           <h1>{{ title }}</h1>
         </div>
+
+        <div class="items">
+          <ul>
+            <li ng-repeat="item in items">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
       </section>
     `,
     controller: 'HomeController'
