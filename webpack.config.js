@@ -16,7 +16,7 @@ module.exports = {
       { test: /\.html$/, loader: 'raw' },
       { test: /\.styl$/, loader: 'style!css!stylus' },
       { test: /\.css/, loader: 'style!css' },
-      { test: /\.js$/, loader: 'babel?stage=1', excludes: [/node_modules/] }
+      { test: /\.js$/, loader: 'babel?stage=1', exclude: [/client\/lib/, /node_modules/, /\.spec\.js/] }
     ]
   },
 
