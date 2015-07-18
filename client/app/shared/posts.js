@@ -5,19 +5,32 @@ const posts = ($http, API, $q) => {
 
   const get = () => {
     return $http.get(`${API.url}/posts`)
-      .then(resp => allPosts = resp.data);
+      .then(({data}) => {
+        allPosts = data.map(post => {
+          post.slug = post.title.replace(/\s+/g, '-');
+          return post;
+        });
+      });
   };
 
-  const getOne = (id) => {
-    const post = _.find(allPosts, {id});
+  const getOne = (query) => {
+
+    const post = _.find(allPosts, query);
 
     if (post) {
       return $q.when(post);
     } else {
-      return $http.get(`${API.url}/posts/${id}`)
+      let url = `${API.url}/posts`;
+
+      if (query.id) {
+        url += `${query.id}`
+      } else if (query.title) {
+        url += `?title=${query.title}`
+      }
+
+      return $http.get(url)
         .then(({data}) => {
-          allPosts.push(data);
-          return data;
+          return data[0];
         });
     }
   };

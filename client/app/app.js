@@ -22,6 +22,7 @@ import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
 import {common} from './components/common/common';
 import {shared} from './shared/shared';
+import {blogPost} from './components/blogPost/blogPost';
 
 angular.module('app', [
   uiRouter,
@@ -34,6 +35,7 @@ angular.module('app', [
   home.name,
   blog.name,
   common.name,
-  shared.name
+  shared.name,
+  blogPost.name
 ])
 .directive('app', appDirective);

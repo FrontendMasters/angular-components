@@ -1,4 +1,23 @@
 @import '../../../styles'
 
 .blog-post
+  margin-top tb-margin + 30
   center(960px)
+  .blog-post-card
+    background-color white
+    makeShadow(1)
+    overflow hidden
+    .blog-post-title
+      background-color bg-color
+      padding tb-padding lr-padding
+      *
+        margin 0px
+        font-weight 300
+        font-size 2.5rem
+    .blog-post-content
+      border-top 1px solid alpha(black, 12%)
+      p
+        font-size 1.5rem
+        font-weight 200
+        line-height 2.3rem
+        padding 0px lr-padding
