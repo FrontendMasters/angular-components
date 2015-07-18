@@ -2,6 +2,7 @@
 // or the from keyword when importing a css/styl file
 // thanks the the styles loader it gets added as a
 // <style> tag in the head by default but can be changed
+import 'normalize.css';
 import './app.styl';
 // the angular libs are just common js
 // and therefore we can assume they were

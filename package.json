@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "angular-ui-router": "^0.2.15",
     "jeet": "^6.1.2",
     "lodash": "^3.10.0",
+    "normalize.css": "^3.0.3",
     "rupture": "^0.6.1"
   },
   "devDependencies": {
