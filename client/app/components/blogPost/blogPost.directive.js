@@ -7,6 +7,7 @@ export const blogPostDirective = () => {
     template,
     controller,
     controllerAs: 'vm',
+    // using resolve, we pass
     scope: {
       post: '='
     },
