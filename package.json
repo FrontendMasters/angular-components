@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start"
   },
   "author": "",
   "license": "ISC",
@@ -19,12 +19,22 @@
     "rupture": "^0.6.1"
   },
   "devDependencies": {
+    "angular-mocks": "^1.4.3",
     "babel-loader": "^5.3.2",
     "browser-sync": "^2.7.13",
+    "chai": "^3.1.0",
     "css-loader": "^0.15.4",
     "file-loader": "^0.8.4",
     "gulp": "^3.9.0",
     "gulp-todoist": "0.0.2",
+    "karma": "^0.12.31",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.5",
+    "karma-webpack": "^1.6.0",
+    "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
     "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.1",
