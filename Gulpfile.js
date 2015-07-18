@@ -11,7 +11,7 @@ var paths = {
   entry: 'client/app/app.js',
   app: ['client/app/**/*.{js,styl,html}'],
   js: 'client/app/**/*!(.spec.js).js',
-  styl: 'client/app/**/*.styl',
+  styl: ['client/app/**/*.styl', 'client/style/**/*.styl'],
   toCopy: ['client/index.html'],
   html: ['client/index.html', 'client/app/**/*.html'],
   dest: 'dist'
