@@ -22,16 +22,38 @@ describe('Blog', () => {
   });
 
   describe('directive', ()=> {
-    // TODO: test the directive to make sure it has the
-    // right DDO and template and controller
+    let ddo;
+    beforeEach(() => {
+      ddo = blogDirective();
+    });
+
+    it('should have the right template', () => {
+      expect(ddo.template).to.equal(template);
+    });
+
+    it('should have the right controller', () => {
+      expect(ddo.controller).to.equal(BlogController);
+    });
+
+    it('should have an isolate scope', () => {
+      expect(ddo.scope).to.be.an('object');
+    });
+
+    it('should use controllerAs', () => {
+      expect(ddo.controllerAs).to.be.a('string');
+    });
   });
 
   describe('controller', ()=> {
-    // TODO: test the controller
+    it('should have blog posts', ()=> {
+      const controller = makeController();
+      expect(controller.posts).to.be.an('array');
+      expect(controller.posts[0]).to.have.property('author');
+      expect(controller.posts[0]).to.have.property('title');
+    });
   });
 
   describe('template', ()=> {
-    // TODO: test the template? yup
-    // get creative
+
   });
 });
