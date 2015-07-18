@@ -3,7 +3,8 @@
 // it with this factory
 
 const posts = ($http, API) => {
-
+  // TODO: create crud methods
+  // use ES2015 method, property shortcuts
   return {};
 };
 

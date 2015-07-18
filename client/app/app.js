@@ -20,7 +20,8 @@ import ngAnimate from 'angular-animate';
 // we must import it with the brackets
 import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
-
+// TODO: register common with app
+// TODO: register shared with app
 
 angular.module('app', [
   uiRouter,
