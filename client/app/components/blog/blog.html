@@ -2,11 +2,13 @@
   <div class="header">
     <h1>{{ vm.message }}</h1>
   </div>
-
+  <div class="search">
+    <textbox bind-to="vm.search" label="SEARCH"></textbox>
+  </div>
   <div class="posts">
-    <div ng-repeat="post in vm.posts" class="post">
+    <div ng-repeat="post in vm.posts | filter:vm.search" class="post slide">
       <div class="post-img">
-        <img src="//placekitten.com/g/200/300" alt="kitten">
+        <img src="//placekitten.com/g/600/600" alt="kitten">
       </div>
       <div class="post-title">
         <span>{{ post.title }}</span>

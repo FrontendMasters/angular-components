@@ -1,11 +1,34 @@
-// TODO: create factory for getting blog posts from api server
-// and removing static data out from blogComponent and replacing
-// it with this factory
+import _ from 'lodash';
 
-const posts = ($http, API) => {
-  // TODO: create crud methods
-  // use ES2015 method, property shortcuts
-  return {};
+const posts = ($http, API, $q) => {
+  let allPosts = [];
+
+  const get = () => {
+    return $http.get(`${API.url}/posts`)
+      .then(resp => allPosts = resp.data);
+  };
+
+  const getOne = (id) => {
+    const post = _.find(allPosts, {id});
+
+    if (post) {
+      return $q.when(post);
+    } else {
+      return $http.get(`${API.url}/posts/${id}`)
+        .then(({data}) => {
+          allPosts.push(data);
+          return data;
+        });
+    }
+  };
+
+  const getState = () => {
+    return allPosts;
+  };
+
+  return {get, getOne, getState};
 };
 
-posts.$inject = ['$http', 'API'];
+posts.$inject = ['$http', 'API', '$q'];
+
+export {posts};

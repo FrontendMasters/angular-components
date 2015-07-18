@@ -21,7 +21,7 @@ import ngAnimate from 'angular-animate';
 import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
 import {common} from './components/common/common';
-
+import {shared} from './shared/shared';
 
 angular.module('app', [
   uiRouter,
@@ -33,6 +33,7 @@ angular.module('app', [
   // module to be
   home.name,
   blog.name,
-  common.name
+  common.name,
+  shared.name
 ])
 .directive('app', appDirective);
