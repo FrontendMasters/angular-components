@@ -8,7 +8,7 @@
   <div class="posts">
     <div ng-repeat="post in vm.posts | filter:vm.search" class="post slide">
       <div class="post-img">
-        <img src="//placekitten.com/g/600/600" alt="kitten">
+        <img ng-src="{{ ::vm.catpic }}" alt="kitten">
       </div>
       <div class="post-title">
         <span>{{ post.title }}</span>
