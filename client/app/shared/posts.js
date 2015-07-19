@@ -2,9 +2,10 @@ import _ from 'lodash';
 
 const posts = ($http, API, $q) => {
   let allPosts = [];
+  let id = 0;
 
   const get = () => {
-    return $http.get(`${API.url}/posts`)
+    return $http.get(`${API.url}/posts?_sort=createdAt&_order=DESC`)
       .then(({data}) => {
         allPosts = data.map(post => {
           post.slug = post.title.replace(/\s+/g, '-');
@@ -39,7 +40,18 @@ const posts = ($http, API, $q) => {
     return allPosts;
   };
 
-  return {get, getOne, getState};
+  const create = (data) => {
+    data.id = data.id || ++id;
+    data.createdAt = new Date().toString();
+
+    return $http({
+      data,
+      url: `${API.url}/posts`,
+      method: 'POST'
+    });
+  };
+
+  return {get, getOne, getState, create};
 };
 
 posts.$inject = ['$http', 'API', '$q'];

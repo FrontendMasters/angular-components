@@ -37,6 +37,7 @@ a
       span(2/8, 5/8, 2)
       *
         font-size 1.3rem
+        margin-left 10px
   main
     padding-top navbar-height
 
@@ -61,6 +62,12 @@ a
   user-select none
   font-size 14px
   line-height 30px
+  &[disabled]
+  &.disabled
+  :disabled
+    background-color white !important//shade(primary-color, 20%)
+    color text-disabled-color
+    box-shadow none !important
   &.accent
     background-color accent-color
   &.fab

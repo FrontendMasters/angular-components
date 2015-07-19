@@ -1,8 +1,9 @@
 <div class="textbox">
   <input
-    type="{{ type }}"
+    type="{{ ::type }}"
     required
-    ng-model="bindTo"/>
+    ng-model="bindTo"
+    name="{{::name }}"/>
   <span class="highlight"></span>
   <span class="bar"></span>
   <label>{{ label }}</label>

@@ -13,6 +13,7 @@ export const textboxDirective = () => {
       $scope.label = attr.label || '';
       $scope.type = attr.type || 'text';
       $scope.bindTo = $scope.bindTo || '';
+      $scope.name = attr.name || '';
     }
   };
 };
