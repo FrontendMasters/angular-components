@@ -1,4 +1,4 @@
-import {blogPostDirective} from './blogPost.directive';
+// TODO: include the directive
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
@@ -23,4 +23,4 @@ const blogPost = angular.module('blogPost', [uiRouter])
       }
     });
   })
-  .directive('blogPost', blogPostDirective)
+  .directive('blogPost' /* TODO: register the directive here*/)
