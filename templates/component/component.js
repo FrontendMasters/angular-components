@@ -1,7 +1,6 @@
-import {<%= name %>Directive} from './<%= name %>.directive';
+// TODO: import and register the directive
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-
 
 export const <%= name %> = angular.module('<%= name %>', [uiRouter])
   .config(($stateProvider) => {
@@ -10,4 +9,4 @@ export const <%= name %> = angular.module('<%= name %>', [uiRouter])
       template: '<<%- name %>></<%- name %>>'
     })
   })
-  .directive('<%= name %>', <%= name %>Directive);
+

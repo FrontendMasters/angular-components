@@ -1,3 +1,5 @@
+// TODO: export the controller
+
 class <%= upCaseName %>Controller {
   constructor() {
     this.greeting = '<%= upCaseName %>Controller!';
@@ -5,6 +7,4 @@ class <%= upCaseName %>Controller {
 
 }
 
-<%= upCaseName %>Controller.$inject = [];
 
-export {<%= upCaseName %>Controller};
