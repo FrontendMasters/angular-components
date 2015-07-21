@@ -4,7 +4,7 @@ var browser = require('browser-sync');
 var webpack = require('webpack-stream');
 var todo    = require('gulp-todoist');
 var path    = require('path');
-var yargs   = require('yargs');
+var yargs   = require('yargs').argv;
 var tpl     = require('gulp-template');
 var rename  = require('gulp-rename');
 
@@ -18,7 +18,8 @@ var paths = {
   styl: ['client/app/**/*.styl', 'client/style/**/*.styl'],
   toCopy: ['client/index.html'],
   html: ['client/index.html', 'client/app/**/*.html'],
-  dest: 'dist'
+  dest: 'dist',
+  blankTemplates: 'templates/component/*.**'
 };
 
 // helper funciton
@@ -75,7 +76,7 @@ gulp.task('component', function(){
   var destPath = path.join(resolveToComponents(), parentPath, name);
 
   return gulp.src(paths.blankTemplates)
-    .pipe(template({
+    .pipe(tpl({
       name: name,
       upCaseName: cap(name)
     }))
