@@ -1,0 +1,25 @@
+<section class="auth">
+  <form class="card" name="authform" novalidate ng-submit="vm.send()">
+    <div class="title">
+      <h3>{{ vm.current }}</h3>
+    </div>
+    <div class="inputs">
+      <textbox bind-to="vm.credits.username" label="username" required></textbox>
+      <textbox bind-to="vm.credits.password" label="password" type="password" required></textbox>
+    </div>
+    <div class="buttons">
+      <button class="button raised accent"
+        ng-disabled="authform.$invalid"
+      >{{ vm.current }}</button>
+    </div>
+  </form>
+
+  <div class="action">
+    <h3>{{ vm.message }}</h3>
+    <button class="button raised" ng-click="vm.changeForm()">{{ vm.other }}</button>
+  </div>
+
+  <div class="err-message" ng-if="vm.showError">
+    <h1 class="message">{{ vm.errorMessage }}</h1>
+  </div>
+</section>

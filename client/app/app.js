@@ -24,7 +24,7 @@ import {common} from './components/common/common';
 import {shared} from './shared/shared';
 import {blogPost} from './components/blogPost/blogPost';
 import {admin} from './components/admin/admin';
-import {about} from './components/about/about';
+import {auth} from './components/auth/auth';
 
 angular.module('app', [
   uiRouter,
@@ -40,6 +40,6 @@ angular.module('app', [
   shared.name,
   blogPost.name,
   admin.name,
-  about.name
+  auth.name
 ])
 .directive('app', appDirective);

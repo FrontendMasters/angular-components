@@ -14,7 +14,7 @@
         <span>{{ post.title }}</span>
       </div>
       <div class="post-author">
-        <span>{{ post.author }}</span>
+        <span>{{ post.author.username }}</span>
       </div>
       <button ui-sref="blogPost({title: post.slug})" class="button fab action">></button>
     </div>

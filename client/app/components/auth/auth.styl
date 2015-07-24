@@ -1,0 +1,35 @@
+@import '../../../styles'
+
+.auth
+  position relative
+  form
+    .title
+      text-align center
+      *
+        font-weight 300
+        font-size 1.5rem
+        margin 0px
+    margin 20px
+    center(700px)
+    makeShadow(1)
+    padding 10px
+    background-color white
+    .inputs
+      margin 15px
+      .textbox
+        col(1/2, 0, 2)
+
+    .buttons
+      margin-top 15px
+      span(1/8, 7/8)
+
+  .action
+    center(700px)
+
+  .error-message
+    position absolute
+    top 50%
+    left 50%
+    background-color white
+    .message
+      color red

@@ -6,7 +6,8 @@ export const admin = angular.module('admin', [uiRouter])
   .config(($stateProvider) => {
     $stateProvider.state('admin', {
       url: '/admin',
-      template: '<admin></admin>'
+      template: '<admin></admin>',
+      auth: true
     })
   })
   .directive('admin', adminDirective);

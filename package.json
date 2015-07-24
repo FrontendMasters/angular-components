@@ -12,6 +12,7 @@
   "dependencies": {
     "angular": "^1.4.3",
     "angular-animate": "^1.4.3",
+    "angular-jwt": "0.0.9",
     "angular-ui-router": "^0.2.15",
     "jeet": "^6.1.2",
     "lodash": "^3.10.0",
