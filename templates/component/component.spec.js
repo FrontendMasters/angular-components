@@ -1,6 +1,6 @@
 import {<%= name %>} from './<%= name %>'
 import {<%= upCaseName %>Controller} from './<%= name %>.controller';
-import {<%= name %>directive} from './<%= name %>.directive';
+import {<%= name %>Directive} from './<%= name %>.directive';
 import template from './<%= name %>.html';
 
 describe('<%= upCaseName %>', ()=>{
