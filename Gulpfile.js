@@ -72,7 +72,6 @@ gulp.task('component', function(){
   };
 
   var name = yargs.name;
-  var routing yargs.routing;
   var parentPath = yargs.parent || '';
   var destPath = path.join(resolveToComponents(), parentPath, name);
 
