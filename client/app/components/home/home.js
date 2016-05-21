@@ -1,8 +1,11 @@
 // TODO: import required modules
+import 'normalize.css';
+import './home.styl';
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import _ from 'lodash';
 
-const home = angular.module('home', [
-
-])
+export const home = angular.module('home', [uiRouter])
 .config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 
